@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "b1dca231-31ad-418c-82f0-0190f330fec4",
+		"name": "WaterOrderdingAPI",
+		"description": "The aim of this API is to implement a water ordering API so farmers can request water to irrigate their farms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AcceptNewOrders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"farmId\":\"Farm1234\",\r\n    \"startDateAndTime\":\"2021-09-15 15:12:14\",\r\n    \"duration\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/waterOrderingService/acceptOrders",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"waterOrderingService",
+						"acceptOrders"
+					]
+				},
+				"description": "this endpoint accept new orders"
+			},
+			"response": []
+		},
+		{
+			"name": "CancelAnOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/waterOrderingService/cancelOrders?orderId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"waterOrderingService",
+						"cancelOrders"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "this endpoint accept new orders"
+			},
+			"response": []
+		},
+		{
+			"name": "FetchStatusOfAllOrder",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/waterOrderingService/allOrderStatus",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"waterOrderingService",
+						"allOrderStatus"
+					]
+				},
+				"description": "this endpoint accept new orders"
+			},
+			"response": []
+		},
+		{
+			"name": "StatusOfParticularOrder",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/waterOrderingService/orderStatus?orderId=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"waterOrderingService",
+						"orderStatus"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "1"
+						}
+					]
+				},
+				"description": "this endpoint accept new orders"
+			},
+			"response": []
+		}
+	]
+}
