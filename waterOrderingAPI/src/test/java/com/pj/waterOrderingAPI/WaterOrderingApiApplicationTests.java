@@ -9,8 +9,18 @@ class WaterOrderingApiApplicationTests {
 	@Test
 	void contextLoads() {
 
+		//writing into dev branch
+		System.out.print("dev branch");
 		//changes in master branch
 		System.out.println("changes in master branch");
+
+		
+		//writing into dev branch
+		System.out.print("dev branch");
+    
+		//changes in master branch
+		System.out.println("changes in master branch");
+
 	}
 
 }
